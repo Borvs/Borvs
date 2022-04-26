@@ -39,10 +39,8 @@ Ent9 = Entry(window, bd=2, justify="center", fg="yellow")
 Ent9.grid(row=2, column=2)
 Ent9.insert(0, "row 2, column 2")
 
-
 yscroll = Scrollbar(window, orient='vertical')
 yscroll.grid(row=5, column=2, rowspan=4, padx=(0,100), pady=5, sticky=NS)
-
 
 datalist = ["Student1", "Student2", "Student3", "Student4", "Student5", "Student6", "Student7", "Student8", "Student9", "Student10"
             , "Student11", "Student12", "Student13", "Student14", "Student15", "Student16", "Student17", "Student18", "Student19", "Student20"]
@@ -52,6 +50,9 @@ lb = Listbox(window, listvariable=var, yscrollcommand=yscroll.set, width=10, hei
 lb.grid(row=5, column=1)
 var.set(tuple(datalist))
 yscroll["command"]= lb.yview()
+
+
+
 
 
 
